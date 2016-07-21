@@ -58,7 +58,7 @@ cd assign/submission
 git clone https://github.com/roglos/moodle-assignsubmission_helixassign.git helixassign
 cd path/to/moodle
 
-LIBRARY RESOURCES
+LIBRARY RESOURCES - NOT USED? (conversation with MJ - May need rebuilding)
 cd blocks
 git clone https://github.com/roglos/moodle-block_library_resources.git library_resources
 cd path/to/moodle
@@ -68,9 +68,6 @@ RICHARD'S ADDITIONAL RECOMMENDED PLUGINS
 cd theme
 git clone https://github.com/bmbrands/theme_bootstrap.git bootstrap
 git clone https://github.com/roelmann/moodle-theme_flexibase.git flexibase
-git clone https://github.com/kennibc/moodle-theme_pioneer.git pioneer
-git clone https://github.com/gjb2048/moodle-theme_essential.git essential
-git clone https://github.com/moodlerooms/moodle-theme_snap.git snap
 cd course/format
 git clone https://github.com/gjb2048/moodle-format_topcoll.git topcoll
 cd ../local
@@ -81,7 +78,7 @@ git clone https://github.com/moodleou/moodle-report_customsql.git customsql
 cd ../blocks
 git clone https://github.com/deraadt/Moodle-block_progress.git progress
 git clone https://github.com/deraadt/moodle-block_completion_progress.git completion_progress
-git clone https://github.com/jleyva/moodle-block_configurablereports.git configurablereports
+git clone https://github.com/jleyva/moodle-block_configurablereports.git configurable_reports
 git clone https://github.com/lsuits/block_quickmail.git quickmail
 git clone https://github.com/marxjohnson/moodle-block_quickfindlist.git quickfindlist
 git clone https://github.com/marxjohnson/moodle-block_quickcourselist.git quickcourselist
@@ -115,17 +112,73 @@ git clone https://github.com/roglos/moodle-block_library_resources.git blocks/li
 
 git clone https://github.com/bmbrands/theme_bootstrap.git theme/bootstrap
 git clone https://github.com/roelmann/moodle-theme_flexibase.git theme/flexibase
-git clone https://github.com/kennibc/moodle-theme_pioneer.git theme/pioneer
-git clone https://github.com/gjb2048/moodle-theme_essential.git theme/essential
 git clone https://github.com/gjb2048/moodle-format_topcoll.git course/format/topcoll
 git clone https://github.com/moodlehq/moodle-local_codechecker.git local/codechecker
-git clone https://github.com/mikasmart/benchmark.git local/benchmark
+git clone https://github.com/mikasmart/benchmark.git report/benchmark
 git clone https://github.com/moodleou/moodle-report_customsql.git report/customsql
 git clone https://github.com/deraadt/Moodle-block_progress.git blocks/progress
 git clone https://github.com/deraadt/moodle-block_completion_progress.git blocks/completion_progress
-git clone https://github.com/jleyva/moodle-block_configurablereports.git blocks/configurablereports
+git clone https://github.com/jleyva/moodle-block_configurablereports.git blocks/configurable_reports
 git clone https://github.com/lsuits/block_quickmail.git blocks/quickmail
 git clone https://github.com/marxjohnson/moodle-block_quickfindlist.git blocks/quickfindlist
 git clone https://github.com/marxjohnson/moodle-block_quickcourselist.git blocks/quickcourselist
 git clone https://github.com/roelmann/moodle-block_course_contacts.git blocks/course_contacts
 
+***Write to git exclude file .git/info/exclude***
+
+UPDATES NEEDED to github versions
+=================================
+quickmail block requires a $plugin->component line
+$plugin->component = 'block_quickmail';
+
+
+UPDATE SCRIPT
+=============
+cd /path/to/your/moodle
+git pull
+cd /path/to/your/moodle/admin/tool/log/store/xapi
+git pull
+cd /path/to/your/moodle/blocks/turnitin
+git pull
+cd /path/to/your/moodle/mod/turnitintooltwo
+git pull
+cd /path/to/your/moodle/plagiarism/turnitin
+git pull
+cd /path/to/your/moodle/course/format/grid
+git pull
+cd /path/to/your/moodle/lib/editor/atto/plugins/helixatto
+git pull
+cd /path/to/your/moodle/lib/editor/tinymce/plugins/helixmedia
+git pull
+cd /path/to/your/moodle/mod/helixmedia
+git pull
+cd /path/to/your/moodle/mod/assign/submission/helixassign
+git pull
+cd /path/to/your/moodle/blocks/library_resources
+git pull
+cd /path/to/your/moodle/theme/bootstrap
+git pull
+cd /path/to/your/moodle/theme/flexibase
+git pull
+cd /path/to/your/moodle/course/format/topcoll
+git pull
+cd /path/to/your/moodle/local/codechecker
+git pull
+cd /path/to/your/moodle/report/benchmark
+git pull
+cd /path/to/your/moodle/report/customsql
+git pull
+cd /path/to/your/moodle/blocks/progress
+git pull
+cd /path/to/your/moodle/blocks/completion_progress
+git pull
+cd /path/to/your/moodle/blocks/configurable_reports
+git pull
+cd /path/to/your/moodle/blocks/quickmail
+git pull
+cd /path/to/your/moodle/blocks/quickfindlist
+git pull
+cd /path/to/your/moodle/blocks/quickcourselist
+git pull
+cd /path/to/your/moodle/blocks/course_contacts
+git pull
